@@ -9,7 +9,7 @@ const navAnchors = [...document.querySelectorAll('.nav-links a[href^="#"]')];
 const savedTheme = localStorage.getItem('portfolio-theme');
 if (savedTheme === 'light' || savedTheme === 'dark') {
   root.dataset.theme = savedTheme;
-} else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+} else {
   root.dataset.theme = 'light';
 }
 
