@@ -549,7 +549,7 @@
           and cloud development.
         </p>
         <p>
-          Recent work: a co-built wearable NIR biosensing device
+          Recent work: a co-built portable NIR biosensing device
           (<strong>Arduino</strong>, I2C sensor, BLE) behind an IEEE-accepted publication,
           a real-time <strong>C++/OpenGL</strong> rendering engine built from scratch,
           a controlled hard-negative vs. random-negative fine-tuning comparison on
@@ -671,20 +671,21 @@
           </div>
           <ul>
             <li>
-              Co-designed and built a wearable dual-wavelength NIR biosensing device
-              with 2 other core contributors — an Arduino Nano 33 BLE Sense
-              microcontroller, an AS7263 NIR sensor configured over I2C, and BLE
-              transmission to a companion mobile app.
+              Co-designed and built a portable NIR biosensing device for noninvasive
+              uric acid estimation with two other core contributors, using an Arduino
+              Nano 33 BLE Sense, an AS7263 sensor over I2C, BLE transmission, and a
+              3D-printed enclosure.
             </li>
             <li>
-              Co-designed the experimental protocol and led model selection across
-              5 ML and 4 DL architectures with Bessel filtering, feature extraction,
-              and leave-one-subject-out cross-validation; the best model achieved
-              10.3% MAPE.
+              Built a Python pipeline for PPG signals from 30 participants at two
+              wavelengths with Bessel filtering, quality checks, and tsfresh feature
+              extraction; compared five ML model families and four DL architectures
+              under leave-one-subject-out cross-validation, where the team's linear
+              regression model achieved 10.3% MAPE with 10 selected features.
             </li>
             <li>
-              Received a national undergraduate research fellowship and placed fourth
-              in a university project competition.
+              Received individual NSTC undergraduate research funding and earned
+              fourth place in NTPU's project competition with a team of three.
             </li>
           </ul>
         </article>
@@ -728,9 +729,9 @@
           </ul>
           <p>
             Added nested-path error localization to the OpenAI Agents retry-policy
-            validator in a personal promptfoo fork. Added 81 new test cases (195
-            total passing) and fixed 6 error-localization regressions in a
-            reproducible before/after comparison.
+            validator in a personal promptfoo fork. Added 81 test cases (195 in the
+            focused files, all passing), including six regression cases that failed
+            before the change and pass after it.
           </p>
           <div class="project-links">
             <a href="https://github.com/Tofuhsu/promptfoo/tree/fix/agents-retry-policy-validation" target="_blank" rel="noopener">Source code</a>
@@ -791,11 +792,10 @@
           <cite>“Noninvasive Portable System With Dual Near-Infrared Light Technology for Monitoring Uric Acid Concentration”</cite>
         </p>
         <p>
-          Co-built the wearable NIR sensing hardware with 2 other core contributors
-          (Arduino Nano 33 BLE Sense, AS7263 I2C sensor, BLE transmission) and
-          co-designed the experimental protocol, PPG signal-processing pipeline,
-          and model selection across 5 ML and 4 DL architectures using
-          leave-one-subject-out cross-validation.
+          Co-built the portable NIR sensing hardware with two other core contributors
+          (Arduino Nano 33 BLE Sense, AS7263 I2C sensor, BLE transmission), built the
+          Python PPG signal-processing pipeline, and compared five ML model families
+          and four DL architectures using leave-one-subject-out cross-validation.
         </p>
       </article>
     </section>
