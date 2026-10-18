@@ -5,31 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta
     name="description"
-    content="Jeff (Hsuan-Fu) Hsu is a USC MSCS candidate building backend, cloud, and distributed systems and seeking 2027 new-grad software engineering roles in the U.S."
+    content="Jeff (Hsuan-Fu) Hsu is a USC MSCS candidate in AI/ML engineering and embedded systems, seeking 2027 new-grad roles in the U.S."
   >
-  <meta name="theme-color" content="#0f172a">
-  <meta property="og:title" content="Jeff (Hsuan-Fu) Hsu | Software Engineer">
+  <meta name="theme-color" content="#0a0f1c">
+  <meta property="og:title" content="Jeff (Hsuan-Fu) Hsu | AI/ML &amp; Embedded Systems Engineer">
   <meta
     property="og:description"
-    content="USC MSCS candidate building backend, cloud, and distributed systems."
+    content="USC MSCS candidate in AI/ML engineering and embedded systems."
   >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tofuhsu.github.io/">
-  <title>Jeff (Hsuan-Fu) Hsu | Software Engineer</title>
+  <title>Jeff (Hsuan-Fu) Hsu | AI/ML &amp; Embedded Systems Engineer</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
   <style>
     :root {
-      --background: #f8fafc;
-      --surface: #ffffff;
-      --surface-soft: #f1f5f9;
-      --text: #172033;
-      --muted: #526079;
-      --line: #dbe3ee;
-      --primary: #1d4ed8;
-      --primary-dark: #1e3a8a;
-      --accent: #0f766e;
-      --shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+      color-scheme: dark;
+      --background: #0a0f1c;
+      --surface: #131b2e;
+      --surface-soft: #1a2439;
+      --text: #e8ecf5;
+      --muted: #94a3c2;
+      --line: #283252;
+      --primary: #5b8cff;
+      --primary-dark: #3f6fe6;
+      --accent: #2dd4bf;
+      --shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
       --radius: 18px;
       --max-width: 1080px;
     }
@@ -86,8 +87,8 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      border-bottom: 1px solid rgba(219, 227, 238, 0.88);
-      background: rgba(248, 250, 252, 0.92);
+      border-bottom: 1px solid rgba(40, 50, 82, 0.9);
+      background: rgba(10, 15, 28, 0.86);
       backdrop-filter: blur(14px);
     }
 
@@ -148,7 +149,8 @@
       margin: 0 0 18px;
       padding: 6px 12px;
       color: var(--accent);
-      background: #ccfbf1;
+      background: rgba(45, 212, 191, 0.14);
+      border: 1px solid rgba(45, 212, 191, 0.3);
       border-radius: 999px;
       font-size: 0.82rem;
       font-weight: 800;
@@ -237,12 +239,12 @@
       margin-left: auto;
       align-self: center;
       justify-self: end;
-      background-color: #e2e8f0;
+      background-color: var(--surface-soft);
       background-image: url("assets/profile.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      border: 3px solid #ffffff;
+      border: 3px solid var(--accent);
       border-radius: 9999px;
       box-shadow: var(--shadow);
     }
@@ -277,7 +279,7 @@
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      box-shadow: 0 8px 28px rgba(15, 23, 42, 0.045);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
     }
 
     .experience-item {
@@ -351,8 +353,8 @@
 
     .tags li {
       padding: 5px 10px;
-      color: var(--primary-dark);
-      background: #dbeafe;
+      color: #aecbff;
+      background: rgba(91, 140, 255, 0.16);
       border-radius: 999px;
       font-size: 0.78rem;
       font-weight: 750;
@@ -363,6 +365,47 @@
       flex-wrap: wrap;
       gap: 16px;
       font-weight: 750;
+    }
+
+    .glance-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .glance-group {
+      padding: 22px 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    .glance-group h3 {
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pill-row li {
+      padding: 6px 12px;
+      color: var(--text);
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 650;
     }
 
     .skills-grid {
@@ -418,7 +461,8 @@
     footer {
       padding: 28px 20px;
       color: var(--muted);
-      background: #eaf0f7;
+      background: #060a14;
+      border-top: 1px solid var(--line);
       text-align: center;
       font-size: 0.9rem;
     }
@@ -452,6 +496,7 @@
       }
 
       .section-heading,
+      .glance-grid,
       .project-grid,
       .skills-grid,
       .education-grid {
@@ -484,8 +529,8 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#research">Research</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="assets/Jeff_Hsuan-Fu_Hsu_Resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+        <li><a href="#glance">Skills</a></li>
+        <li><a href="#top">Résumé</a></li>
       </ul>
     </div>
   </nav>
@@ -493,21 +538,25 @@
   <main id="content">
     <header class="hero" id="top">
       <div class="hero-copy">
-        <p class="eyebrow">Open to 2027 New-Grad Roles</p>
+        <p class="eyebrow">Seeking 2027 New-Grad AI Engineering &amp; Embedded Systems Roles</p>
         <h1>Jeff (Hsuan-Fu) Hsu</h1>
         <p>
           I'm an M.S. in Computer Science candidate at the
           <a href="https://www.usc.edu/" target="_blank" rel="noopener">University of Southern California</a>,
-          graduating in May 2027. I build backend systems, cloud applications,
-          and distributed software.
+          graduating in May 2027. I'm an <strong>AI / ML engineer</strong> who also builds
+          backend systems, cloud applications, and low-level C++/embedded work.
         </p>
         <p>
-          My experience spans a production government benefits module,
-          cloud-deployed web applications, computer graphics, and an IEEE-accepted
-          biomedical signal-processing research project.
+          Recent work: a controlled hard-negative vs. random-negative fine-tuning
+          comparison on <strong>PyTorch</strong>/<strong>Sentence Transformers</strong>
+          (nDCG@10 +3.2%, Recall@10 +2.1% on held-out test), an LLM agent with
+          <strong>LangGraph</strong> and MCP tools, a production government benefits
+          module, and a co-built wearable biosensing device behind an
+          IEEE-accepted publication.
         </p>
         <div class="hero-actions" aria-label="Profile links">
-          <a class="button" href="assets/Jeff_Hsuan-Fu_Hsu_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="button" href="assets/Hsuan_Fu_Hsu_AI_Engineering_May2027.pdf" target="_blank" rel="noopener">Resume — AI Engineering</a>
+          <a class="button" href="assets/Hsuan_Fu_Hsu_Embedded_Systems_May2027.pdf" target="_blank" rel="noopener">Resume — Embedded Systems</a>
           <a class="button secondary" href="mailto:hsuanfu0709@gmail.com">Email</a>
           <a class="button secondary" href="https://www.linkedin.com/in/hsuan-fu-hsu/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="button secondary" href="https://github.com/Tofuhsu" target="_blank" rel="noopener">GitHub</a>
@@ -516,6 +565,61 @@
 
       <div class="profile-avatar" role="img" aria-label="Jeff Hsu"></div>
     </header>
+
+    <section id="glance" aria-labelledby="glance-title">
+      <div class="section-heading">
+        <h2 id="glance-title">Skills at a Glance</h2>
+        <p>The short version, before you scroll.</p>
+      </div>
+
+      <div class="glance-grid">
+        <div class="glance-group">
+          <h3>AI / ML</h3>
+          <ul class="pill-row">
+            <li>PyTorch</li>
+            <li>Sentence Transformers</li>
+            <li>TensorFlow</li>
+            <li>LangChain / LangGraph</li>
+            <li>MCP</li>
+            <li>NumPy</li>
+          </ul>
+        </div>
+        <div class="glance-group">
+          <h3>Backend &amp; Cloud</h3>
+          <ul class="pill-row">
+            <li>Python</li>
+            <li>C#</li>
+            <li>ASP.NET Core</li>
+            <li>FastAPI</li>
+            <li>Node.js</li>
+            <li>Docker</li>
+            <li>Google Cloud Run</li>
+            <li>SQL Server</li>
+          </ul>
+        </div>
+        <div class="glance-group">
+          <h3>Embedded &amp; Systems</h3>
+          <ul class="pill-row">
+            <li>C++</li>
+            <li>C</li>
+            <li>Arduino</li>
+            <li>I2C sensors</li>
+            <li>BLE</li>
+            <li>OpenGL / GLSL</li>
+          </ul>
+        </div>
+        <div class="glance-group">
+          <h3>Engineering Practice</h3>
+          <ul class="pill-row">
+            <li>Git</li>
+            <li>GitHub Actions CI</li>
+            <li>pytest</li>
+            <li>xUnit</li>
+            <li>Vitest</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <section id="experience" aria-labelledby="experience-title">
       <div class="section-heading">
@@ -564,13 +668,16 @@
           </div>
           <ul>
             <li>
-              Owned the Python signal-processing and data-preparation pipeline that
-              transformed raw embedded-device PPG signals into model-ready datasets.
+              Co-designed and built a wearable dual-wavelength NIR biosensing device
+              with 2 other core contributors — an Arduino Nano 33 BLE Sense
+              microcontroller, an AS7263 NIR sensor configured over I2C, and BLE
+              transmission to a companion mobile app.
             </li>
             <li>
-              Implemented Bessel filtering, signal-quality screening, feature
-              extraction and selection, and leave-one-subject-out cross-validation;
-              the dual-band regression model achieved 10.3% MAPE.
+              Co-designed the experimental protocol and led model selection across
+              5 ML and 4 DL architectures with Bessel filtering, feature extraction,
+              and leave-one-subject-out cross-validation; the best model achieved
+              10.3% MAPE.
             </li>
             <li>
               Received a national undergraduate research fellowship and placed fourth
@@ -585,28 +692,45 @@
       <div class="section-heading">
         <h2 id="projects-title">Selected Projects</h2>
         <p>
-          Projects selected for relevance to backend, cloud, full-stack, and systems
-          engineering roles.
+          Projects selected for relevance to AI/ML, backend, cloud, and
+          systems engineering roles.
         </p>
       </div>
 
       <div class="project-grid">
         <article class="project-card">
-          <h3>Art Explorer</h3>
-          <ul class="tags" aria-label="Art Explorer technologies">
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>Docker</li>
-            <li>Google Cloud Run</li>
+          <h3>Scientific Retrieval Fine-tuning</h3>
+          <ul class="tags" aria-label="Scientific Retrieval Fine-tuning technologies">
+            <li>Python</li>
+            <li>PyTorch</li>
+            <li>Sentence Transformers</li>
+            <li>MPS</li>
           </ul>
           <p>
-            Built and deployed an art discovery service that aggregates the Met
-            Museum, Harvard Art Museums, and Wikipedia APIs. Implemented server-side
-            pagination, interactive maps, related works, and persistent favorites.
+            Ran a controlled 3-arm fine-tuning comparison (original, random-negative,
+            hard-negative) of MiniLM with TripletLoss on Apple Silicon. Hard-negative
+            mining improved held-out BEIR SciFact test nDCG@10 by 3.2% and Recall@10
+            by 2.1% over matched random-negative fine-tuning, verified with 53 unit tests.
           </p>
           <div class="project-links">
-            <a href="https://art-explorer-394763791461.us-central1.run.app/" target="_blank" rel="noopener">Live demo</a>
-            <a href="https://github.com/Tofuhsu/assignment3-art-explorer" target="_blank" rel="noopener">Source code</a>
+            <a href="https://github.com/Tofuhsu/sentence-transformers/pull/1" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Promptfoo Agent Retry Validation</h3>
+          <ul class="tags" aria-label="Promptfoo Agent Retry Validation technologies">
+            <li>TypeScript</li>
+            <li>Vitest</li>
+          </ul>
+          <p>
+            Added nested-path error localization to the OpenAI Agents retry-policy
+            validator in a personal promptfoo fork. Added 81 new test cases (195
+            total passing) and fixed 6 error-localization regressions in a
+            reproducible before/after comparison.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Tofuhsu/promptfoo/tree/fix/agents-retry-policy-validation" target="_blank" rel="noopener">Source code</a>
           </div>
         </article>
 
@@ -645,22 +769,6 @@
           </div>
         </article>
 
-        <article class="project-card">
-          <h3>Mochi Online Judge</h3>
-          <ul class="tags" aria-label="Mochi Online Judge technologies">
-            <li>Vue.js</li>
-            <li>REST APIs</li>
-            <li>Team Leadership</li>
-          </ul>
-          <p>
-            Led a four-developer frontend team building an interface with asynchronous
-            submission tracking. Defined API contracts with backend and dispatcher
-            teams and improved the handling of large test outputs.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/sirubell/mochi" target="_blank" rel="noopener">Source code</a>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -680,9 +788,11 @@
           <cite>“Noninvasive Portable System With Dual Near-Infrared Light Technology for Monitoring Uric Acid Concentration”</cite>
         </p>
         <p>
-          Contributed the PPG signal-processing and model-ready data pipeline,
-          including Bessel filtering, signal-quality screening, feature extraction,
-          and leave-one-subject-out cross-validation.
+          Co-built the wearable NIR sensing hardware with 2 other core contributors
+          (Arduino Nano 33 BLE Sense, AS7263 I2C sensor, BLE transmission) and
+          co-designed the experimental protocol, PPG signal-processing pipeline,
+          and model selection across 5 ML and 4 DL architectures using
+          leave-one-subject-out cross-validation.
         </p>
       </article>
     </section>
@@ -699,19 +809,27 @@
       <div class="skills-grid">
         <div class="skill-group">
           <h3>Languages</h3>
-          <p>C#, C++, Python, JavaScript, SQL</p>
+          <p>Python, C++, C, C#, TypeScript, JavaScript, SQL</p>
+        </div>
+        <div class="skill-group">
+          <h3>AI / ML</h3>
+          <p>PyTorch, Sentence Transformers, TensorFlow, NumPy, LangChain, LangGraph, MCP, tsfresh, signal preprocessing, LOSO validation</p>
         </div>
         <div class="skill-group">
           <h3>Backend and Web</h3>
-          <p>ASP.NET Core MVC, Entity Framework Core, Node.js, Express, Flask, Vue.js, Razor, REST APIs</p>
+          <p>ASP.NET Core MVC, Entity Framework Core, FastAPI, Node.js, Express, Vue 3, REST APIs</p>
         </div>
         <div class="skill-group">
           <h3>Cloud and Data</h3>
-          <p>Google Cloud Run, Docker, SQL Server, relational database design</p>
+          <p>Docker, Google Cloud Run, SQL Server, SQLite, relational database design</p>
         </div>
         <div class="skill-group">
-          <h3>Systems and ML</h3>
-          <p>Git, Linux, OpenGL, GLSL, NumPy, PyTorch, TensorFlow</p>
+          <h3>Embedded and Systems</h3>
+          <p>Arduino (Nano 33 BLE Sense), I2C sensor integration, BLE, OpenGL, GLSL, manual memory/buffer management</p>
+        </div>
+        <div class="skill-group">
+          <h3>Engineering Practice</h3>
+          <p>Git, GitHub Actions CI, pytest, xUnit, Vitest, integration testing, Linux</p>
         </div>
       </div>
     </section>
@@ -739,8 +857,9 @@
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Let's Connect</h2>
       <p>
-        I am seeking 2027 new-graduate software engineering opportunities in the
-        United States, especially backend, cloud, platform, and distributed systems roles.
+        I am seeking 2027 new-graduate opportunities in the United States in
+        <strong>AI / ML engineering</strong> and <strong>embedded systems engineering</strong>,
+        and I'm also open to backend and platform engineering roles.
       </p>
       <div class="hero-actions" style="justify-content: center">
         <a class="button" href="mailto:hsuanfu0709@gmail.com">Email me</a>
