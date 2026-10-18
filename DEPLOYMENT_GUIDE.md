@@ -43,14 +43,15 @@
 
 在 GitHub repository 開啟要修改的檔案，按鉛筆圖示編輯並 commit。更新通常會在幾分鐘內自動發布。
 
-若要更換履歷，請上傳新的 PDF 並維持以下檔名，網站上的按鈕就不需要修改：
+若要更換履歷，請上傳新的 PDF 並維持以下檔名，網站上的兩個按鈕就不需要修改：
 
-`assets/Jeff_Hsuan-Fu_Hsu_Resume.pdf`
+- `assets/Hsuan_Fu_Hsu_Embedded_Systems_May2027.pdf`
+- `assets/Hsuan_Fu_Hsu_AI_Engineering_May2027.pdf`
 
 ## 常見問題
 
 - **網站顯示 404：** 確認 repository 名稱為 `tofuhsu.github.io`、Visibility 是 Public、Pages branch 是 `main` 與 `/ (root)`。
 - **首頁沒有出現：** 確認 `index.html` 位於 repository 最外層。
 - **版面沒有樣式：** 確認 `styles.css`、`script.js` 和 `assets` 資料夾都已上傳，且名稱大小寫完全相同。
-- **履歷下載失敗：** 確認 PDF 位於 `assets/Jeff_Hsuan-Fu_Hsu_Resume.pdf`。
+- **履歷下載失敗：** 確認上面兩個 PDF 檔名與 `assets/` 中的檔案完全相同。
 - **剛更新但畫面沒變：** 等待數分鐘後重新整理；必要時使用強制重新整理。
