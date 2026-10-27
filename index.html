@@ -552,6 +552,8 @@
           Recent work: a co-built portable NIR biosensing device
           (<strong>Arduino</strong>, I2C sensor, BLE) behind an IEEE-accepted publication,
           a real-time <strong>C++/OpenGL</strong> rendering engine built from scratch,
+          YOLO people counting on a <strong>Raspberry Pi 4</strong> at a USC IEEE IoT hackathon,
+          a CSV import service on <strong>AWS</strong> built around Lambda event source mappings,
           a controlled hard-negative vs. random-negative fine-tuning comparison on
           <strong>PyTorch</strong>/<strong>Sentence Transformers</strong>
           (nDCG@10 +3.2%, Recall@10 +2.1% on held-out test), and a production
@@ -582,6 +584,7 @@
             <li>C++</li>
             <li>C</li>
             <li>Arduino</li>
+            <li>Raspberry Pi 4</li>
             <li>I2C sensors</li>
             <li>BLE</li>
             <li>OpenGL / GLSL</li>
@@ -606,6 +609,7 @@
             <li>ASP.NET Core</li>
             <li>FastAPI</li>
             <li>Node.js</li>
+            <li>AWS (Lambda, SQS, DynamoDB, CDK)</li>
             <li>Docker</li>
             <li>Google Cloud Run</li>
             <li>SQL Server</li>
@@ -702,6 +706,49 @@
       </div>
 
       <div class="project-grid">
+        <article class="project-card">
+          <h3>CatalogBridge — AWS CSV Import Service</h3>
+          <ul class="tags" aria-label="CatalogBridge technologies">
+            <li>Python</li>
+            <li>AWS CDK</li>
+            <li>Lambda</li>
+            <li>SQS</li>
+            <li>DynamoDB</li>
+          </ul>
+          <p>
+            Built and deployed a CSV import service on AWS with CDK (API Gateway,
+            Cognito, S3, SQS, DynamoDB) and three Lambda event source mappings, plus an
+            optional Bedrock mapping suggestion with manual fallback. All 16 live
+            end-to-end checks passed; 6 live crash and duplicate tests saved no row
+            twice, and a write-conflict fix cut post-crash job time from 364.7 s to 12.9 s.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Tofuhsu/catalogbridge" target="_blank" rel="noopener">Source code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Classroom AC Setpoint Simulator — USC IEEE HackIoT</h3>
+          <ul class="tags" aria-label="HackIoT technologies">
+            <li>Raspberry Pi 4</li>
+            <li>YOLO</li>
+            <li>TypeScript</li>
+            <li>Next.js</li>
+            <li>Supabase</li>
+          </ul>
+          <p>
+            Team of 4. Ran YOLO people counting on a Raspberry Pi 4 with teammates at
+            about 7 frames per second and sent the counts to Supabase. Ported a
+            teammate's Python AC setpoint model to TypeScript, matching its output hour
+            by hour over 1,344 hours, and built a Next.js simulator; in a simulated
+            8-week run, one study room used an estimated 27% less energy (2,143 kWh)
+            than a fixed 22°C setting.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/1chooo/mjhh-usc-ieee-HackIoT" target="_blank" rel="noopener">Source code (team repo)</a>
+          </div>
+        </article>
+
         <article class="project-card">
           <h3>Scientific Retrieval Fine-tuning</h3>
           <ul class="tags" aria-label="Scientific Retrieval Fine-tuning technologies">
@@ -816,7 +863,7 @@
         </div>
         <div class="skill-group">
           <h3>Embedded and Systems</h3>
-          <p>Arduino (Nano 33 BLE Sense), I2C sensor integration, BLE, OpenGL, GLSL, manual memory/buffer management</p>
+          <p>Arduino (Nano 33 BLE Sense), Raspberry Pi 4, I2C sensor integration, BLE, OpenGL, GLSL, manual memory/buffer management</p>
         </div>
         <div class="skill-group">
           <h3>AI / ML</h3>
@@ -828,7 +875,7 @@
         </div>
         <div class="skill-group">
           <h3>Cloud and Data</h3>
-          <p>Docker, Google Cloud Run, SQL Server, SQLite, relational database design</p>
+          <p>AWS (Lambda, SQS, DynamoDB, S3, EventBridge, Cognito, Bedrock, CDK), Docker, Google Cloud Run, SQL Server, SQLite, relational database design</p>
         </div>
         <div class="skill-group">
           <h3>Engineering Practice</h3>
