@@ -50,7 +50,6 @@
     h1, h2, h3 { margin: 0; line-height: 1.2; text-wrap: balance; }
     p { margin: 0; }
     .mono { font-family: var(--f-mono); }
-    .eyebrow { font-family: var(--f-mono); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
     /* ambient glow that follows the cursor */
@@ -241,9 +240,9 @@
     <header class="hero">
       <div class="wrap">
         <div class="hero-text">
-          <span class="status"><span class="dot"></span>Open to 2027 new grad roles · Embedded &amp; AI</span>
+          <span class="status"><span class="dot"></span>Open to 2027 new grad roles</span>
           <h1>Jeff (Hsuan-Fu) Hsu<br><span class="soft">Embedded systems &amp; AI engineer</span></h1>
-          <p class="lede">M.S. Computer Science at <b>USC</b> (May 2027). I build <b>sensor hardware</b> (an NIR device, a Raspberry Pi people counter), <b>C++ graphics</b>, <b>AWS serverless</b> services, and <b>RAG evaluation</b>, and I measure what I build.</p>
+          <p class="lede">M.S. Computer Science at <b>USC</b> (May 2027).</p>
           <div class="cta">
             <a class="btn primary" href="assets/Hsuan_Fu_Hsu_Embedded_Systems_May2027.pdf" target="_blank" rel="noopener">Resume · Embedded</a>
             <a class="btn" href="assets/Hsuan_Fu_Hsu_AI_Engineering_May2027.pdf" target="_blank" rel="noopener">Resume · AI</a>
@@ -256,23 +255,22 @@
         </div>
         <div class="stage">
           <canvas id="orb" aria-label="Interactive 3D point cloud. Drag to rotate."></canvas>
-          <span class="stage-label">drag to rotate · <b>hand-written 3D projection</b></span>
         </div>
       </div>
     </header>
 
     <div class="numbers">
       <div class="wrap">
-        <div class="num reveal"><span class="v"><span data-count="29" data-dec="0">29</span></span><span class="k">government offices running my birth-grant app</span></div>
-        <div class="num reveal"><span class="v"><span data-count="10.3" data-dec="1">10.3</span><small>%</small></span><span class="k">MAPE, team's best model on the NIR sensor device</span></div>
-        <div class="num reveal"><span class="v"><span data-count="181.5" data-dec="1">181.5</span><small> rows/s</small></span><span class="k">CatalogBridge on AWS, up from 37.2</span></div>
-        <div class="num reveal"><span class="v"><span data-count="0.695" data-dec="3">0.695</span></span><span class="k">nDCG@10 with a reranker on 300 SciFact claims</span></div>
+        <div class="num reveal"><span class="v"><span data-count="29" data-dec="0">29</span></span><span class="k">government offices</span></div>
+        <div class="num reveal"><span class="v"><span data-count="10.3" data-dec="1">10.3</span><small>%</small></span><span class="k">MAPE, NIR device</span></div>
+        <div class="num reveal"><span class="v"><span data-count="181.5" data-dec="1">181.5</span><small> rows/s</small></span><span class="k">on AWS</span></div>
+        <div class="num reveal"><span class="v"><span data-count="0.695" data-dec="3">0.695</span></span><span class="k">nDCG@10</span></div>
       </div>
     </div>
 
     <section class="block" id="experience" aria-labelledby="exp-h">
       <div class="wrap">
-        <div class="head reveal"><span class="eyebrow">Experience</span><h2 id="exp-h">Where I've worked</h2></div>
+        <div class="head reveal"><h2 id="exp-h">Experience</h2></div>
         <div class="timeline">
           <article class="role reveal">
             <div class="when">Jul 2026 – Aug 2026<br>Taichung, Taiwan</div>
@@ -304,7 +302,7 @@
 
     <section class="block" id="projects" aria-labelledby="proj-h">
       <div class="wrap">
-        <div class="head reveal"><span class="eyebrow">Projects</span><h2 id="proj-h">Things I built and measured</h2></div>
+        <div class="head reveal"><h2 id="proj-h">Projects</h2></div>
         <div class="filters" role="group" aria-label="Filter projects">
           <button type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
           <button type="button" id="f-emb" data-f="embedded" aria-pressed="false">Embedded &amp; C++</button>
@@ -315,7 +313,7 @@
           <article class="card reveal" data-cat="embedded">
             <div class="top"><h3>Classroom AC Control System</h3><span class="date">Oct 2026</span></div>
             <span class="tag">USC IEEE HackIoT · team of 4</span>
-            <div class="metric"><span class="v">~7 FPS</span><span class="k">YOLO people counting on a Raspberry Pi 4</span></div>
+            <div class="metric"><span class="v">~7 FPS</span><span class="k">YOLO on Raspberry Pi 4</span></div>
             <ul>
               <li>Set up a Raspberry Pi 4 with teammates to count classroom occupants using YOLO at approximately 7 FPS and log DHT11 temperature and humidity readings to Supabase every 30 seconds.</li>
               <li>Ported a Python air-conditioning model to TypeScript and verified matching results across eight weeks of simulated operation. Built a Next.js simulator that estimated 27% energy savings for one room over that period.</li>
@@ -326,8 +324,7 @@
 
           <article class="card reveal" data-cat="embedded">
             <div class="top"><h3>3D Rendering Engine</h3><span class="date">Oct 2022 – Jan 2023 · rebuilt Nov 2026</span></div>
-            <span class="tag">C++ · OpenGL · GLSL</span>
-            <div class="metric"><span class="v">From scratch</span><span class="k">own OBJ/MTL parser feeding the GPU pipeline</span></div>
+            <div class="metric"><span class="v">−71%</span><span class="k">vertices after deduplication</span></div>
             <ul>
               <li>Rebuilt a C++/OpenGL renderer with an OBJ/MTL parser and vertex deduplication, reducing a test model's vertex count by 71% and parse time from 108 ms to 56 ms.</li>
               <li>Added Cook-Torrance PBR with image based lighting, PCF shadows, and glTF 2.0 loading. Fuzz tested both loaders under ASan/UBSan, with no issues found across more than 710,000 OBJ inputs.</li>
@@ -339,7 +336,7 @@
           <article class="card reveal" data-cat="cloud">
             <div class="top"><h3>CatalogBridge</h3><span class="date">Oct 2026</span></div>
             <span class="tag">AWS CSV import service</span>
-            <div class="metric"><span class="v">37.2 → 181.5</span><span class="k">rows/s after moving SQS batch size from 1 to 10 (2,000-row runs, 3 each)</span></div>
+            <div class="metric"><span class="v">37.2 → 181.5</span><span class="k">rows/s</span></div>
             <ul>
               <li>Built and deployed a serverless CSV import service using AWS CDK, Lambda, SQS, DynamoDB, and Cognito. All 16 end to end tests passed against the live deployment.</li>
               <li>Used DynamoDB transactions to prevent duplicate row writes, verified in nine live crash and duplicate tests. Reduced job completion time after a crash from 365 s to 5 s.</li>
@@ -350,8 +347,7 @@
 
           <article class="card reveal" data-cat="ai">
             <div class="top"><h3>Scientific Claim QA: RAG Evaluation</h3><span class="date">Oct 2026</span></div>
-            <span class="tag">6 setups · 300 claims · frozen protocol</span>
-            <div class="metric"><span class="v">0.645 → 0.695</span><span class="k">nDCG@10 with a reranker; faithful answers stayed at 79–84%</span></div>
+            <div class="metric"><span class="v">0.645 → 0.695</span><span class="k">nDCG@10 with a reranker</span></div>
             <ul>
               <li>Built a FastAPI RAG service with FAISS and a local LLM through Ollama, and tested six setups on 300 claims. A reranker raised nDCG@10 from 0.645 to 0.695, but faithful answers stayed between 79% and 84% in all six.</li>
               <li>Dropped an LLM judge after it matched 20 hand labels no better than chance (kappa −0.07). Shipped the service with API keys, rate limits, Docker, and 112 tests in CI.</li>
@@ -362,8 +358,8 @@
 
           <article class="card reveal" data-cat="ai">
             <div class="top"><h3>Scientific Retrieval Fine-tuning</h3><span class="date">Oct 2026</span></div>
-            <span class="tag">Personal fork · 3 seeds</span>
-            <div class="metric"><span class="v">+3.2%</span><span class="k">nDCG@10 over random negatives on 300 SciFact test claims</span></div>
+            <span class="tag">Personal fork</span>
+            <div class="metric"><span class="v">+3.2%</span><span class="k">nDCG@10</span></div>
             <ul>
               <li>Fine tuned MiniLM with PyTorch on mined hard negatives, improving nDCG@10 by 3.2% and Recall@10 by 2.1% over random negatives on 300 SciFact test claims across three seeds.</li>
               <li>Added data leakage checks, a false negative review, and 53 unit tests.</li>
@@ -374,8 +370,8 @@
 
           <article class="card reveal" data-cat="ai">
             <div class="top"><h3>Promptfoo Agent Retry Validation</h3><span class="date">Oct 2026</span></div>
-            <span class="tag">Personal fork · TypeScript</span>
-            <div class="metric"><span class="v">81 tests</span><span class="k">60 config checks and 11 retry scenarios with mocked model calls</span></div>
+            <span class="tag">Personal fork</span>
+            <div class="metric"><span class="v">81 tests</span><span class="k">Vitest</span></div>
             <ul>
               <li>Added nested error paths to the retry policy checks in TypeScript. Six new tests fail before the change and pass after it.</li>
             </ul>
@@ -388,7 +384,7 @@
 
     <section class="block" id="research" aria-labelledby="res-h">
       <div class="wrap">
-        <div class="head reveal"><span class="eyebrow">Research</span><h2 id="res-h">Noninvasive uric acid sensing</h2></div>
+        <div class="head reveal"><h2 id="res-h">Research</h2></div>
         <div class="research">
           <div class="paper reveal">
             <span class="tag">IEEE Transactions on Human-Machine Systems · accepted Aug 2026</span>
@@ -405,7 +401,7 @@
 
     <section class="block" id="skills" aria-labelledby="sk-h">
       <div class="wrap">
-        <div class="head reveal"><span class="eyebrow">Skills</span><h2 id="sk-h">Tools I've shipped with</h2></div>
+        <div class="head reveal"><h2 id="sk-h">Skills</h2></div>
         <div class="skills">
           <div class="skill reveal"><h3>Languages</h3><div class="pills"><span class="pill">C++</span><span class="pill">Python</span><span class="pill">C#</span><span class="pill">TypeScript</span><span class="pill">SQL</span></div></div>
           <div class="skill reveal"><h3>Embedded &amp; Graphics</h3><div class="pills"><span class="pill">Raspberry Pi 4</span><span class="pill">Arduino Nano 33 BLE Sense</span><span class="pill">I2C</span><span class="pill">BLE</span><span class="pill">OpenGL</span><span class="pill">GLSL</span></div></div>
@@ -417,7 +413,7 @@
 
     <section class="block" aria-labelledby="edu-h">
       <div class="wrap">
-        <div class="head reveal"><span class="eyebrow">Education</span><h2 id="edu-h">Education</h2></div>
+        <div class="head reveal"><h2 id="edu-h">Education</h2></div>
         <div class="edu">
           <div class="reveal"><h3>University of Southern California</h3><p>M.S. Computer Science · Jan 2026 – May 2027 (expected) · Los Angeles</p></div>
           <div class="reveal"><h3>National Taipei University</h3><p>B.S. Computer Science · Sept 2020 – June 2024 · New Taipei City</p></div>
@@ -428,7 +424,7 @@
     <section class="contact" id="contact" aria-labelledby="ct-h">
       <div class="wrap">
         <div class="box reveal">
-          <div><h2 id="ct-h">Let's talk</h2><p>Looking for 2027 new grad roles in embedded systems and AI engineering.</p></div>
+          <div><h2 id="ct-h">Let's talk</h2></div>
           <div class="cta">
             <a class="btn primary" href="mailto:hsuanfu0709@gmail.com">Email me</a>
             <a class="btn" href="https://www.linkedin.com/in/hsuan-fu-hsu/" target="_blank" rel="noopener">LinkedIn</a>
