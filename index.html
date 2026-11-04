@@ -86,6 +86,8 @@
     .hero-text { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
     .hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; letter-spacing: -0.02em; }
     .hero h1 .soft { color: var(--muted); font-weight: 500; }
+    .avatar { width: 104px; height: 104px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); background: var(--surface-2); }
+    @media (max-width: 520px) { .avatar { width: 84px; height: 84px; } }
     .hero .lede { color: var(--muted); font-size: 1.08rem; max-width: 34em; }
     .hero .lede b { color: var(--text); font-weight: 500; }
     .status { display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-mono); font-size: 0.8rem; color: var(--muted);
@@ -240,6 +242,7 @@
     <header class="hero">
       <div class="wrap">
         <div class="hero-text">
+          <img class="avatar" src="assets/profile.jpg" alt="Jeff Hsu" width="104" height="104">
           <span class="status"><span class="dot"></span>Open to 2027 new grad roles</span>
           <h1>Jeff (Hsuan-Fu) Hsu<br><span class="soft">Embedded systems &amp; AI engineer</span></h1>
           <p class="lede">M.S. Computer Science at <b>USC</b> (May 2027).</p>
