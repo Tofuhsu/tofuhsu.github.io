@@ -280,9 +280,9 @@
               <h3>Software Engineer Intern</h3>
               <div class="org">Tech-Management Workshop Co., Ltd.</div>
               <ul>
-                <li>Built a government birth-grant app on my own with ASP.NET Core MVC and SQL Server, deployed to 29 offices.</li>
-                <li>Replaced manual full-dataset uploads with sync of changed records only across the 29 offices.</li>
-                <li>Tuned SQL Server processing and storage, cutting database latency by at least 50% and resource use by at least 30%.</li>
+                <li>Built a birth grant application system using ASP.NET Core MVC and SQL Server as the sole developer, and deployed it to 29 government offices.</li>
+                <li>Replaced manual uploads of entire datasets with a sync process that transfers only changed records across 29 offices.</li>
+                <li>Optimized SQL Server processing and storage, reducing database latency by at least 50% and resource usage by at least 30%.</li>
               </ul>
             </div>
           </article>
@@ -292,9 +292,9 @@
               <h3>Undergraduate Researcher</h3>
               <div class="org">National Taipei University · Advisor: Prof. Bor-Shing Lin</div>
               <ul>
-                <li>Co-built a portable NIR sensing device with 2 teammates: Arduino Nano 33 BLE Sense, an AS7263 sensor over I2C, and BLE data transfer.</li>
-                <li>Built the Python signal pipeline for 30 participants at 2 wavelengths; the team's best model reached 10.3% MAPE under leave-one-subject-out testing.</li>
-                <li>Won individual NSTC research funding; 4th place in NTPU's project competition (team of 3).</li>
+                <li>Co-developed a portable NIR sensing device with two teammates, using an Arduino Nano 33 BLE Sense and an AS7263 sensor connected over I2C. The device sampled 810/860 nm signals at 34 Hz and transmitted readings over BLE.</li>
+                <li>Built a Python pipeline to process NIR signals from 30 participants. The team's best model estimated uric acid levels with 10.3% MAPE in leave-one-subject-out testing.</li>
+                <li>Received an individual NSTC research grant and placed fourth in NTPU's project competition as part of a three person team.</li>
               </ul>
             </div>
           </article>
@@ -317,20 +317,20 @@
             <span class="tag">USC IEEE HackIoT · team of 4</span>
             <div class="metric"><span class="v">~7 FPS</span><span class="k">YOLO people counting on a Raspberry Pi 4</span></div>
             <ul>
-              <li>Set up a Raspberry Pi 4 with teammates to count people with YOLO and read a DHT11 sensor twice a minute, sending data to Supabase.</li>
-              <li>Ported a teammate's Python AC model to TypeScript (matched over 1,344 hours) and built a Next.js simulator; one room used an estimated 27% less energy in an 8-week simulation.</li>
+              <li>Set up a Raspberry Pi 4 with teammates to count classroom occupants using YOLO at approximately 7 FPS and log DHT11 temperature and humidity readings to Supabase every 30 seconds.</li>
+              <li>Ported a Python air-conditioning model to TypeScript and verified matching results across eight weeks of simulated operation. Built a Next.js simulator that estimated 27% energy savings for one room over that period.</li>
             </ul>
             <div class="pills"><span class="pill">Raspberry Pi 4</span><span class="pill">YOLO</span><span class="pill">DHT11</span><span class="pill">TypeScript</span><span class="pill">Next.js</span></div>
             <div class="foot"><a href="https://github.com/1chooo/mjhh-usc-ieee-HackIoT" target="_blank" rel="noopener">Source code →</a></div>
           </article>
 
           <article class="card reveal" data-cat="embedded">
-            <div class="top"><h3>3D Rendering Engine</h3><span class="date">Sept – Dec 2023</span></div>
+            <div class="top"><h3>3D Rendering Engine</h3><span class="date">Oct 2022 – Jan 2023 · rebuilt Nov 2026</span></div>
             <span class="tag">C++ · OpenGL · GLSL</span>
             <div class="metric"><span class="v">From scratch</span><span class="k">own OBJ/MTL parser feeding the GPU pipeline</span></div>
             <ul>
-              <li>Wrote a C++ OBJ/MTL parser and OpenGL pipeline with VBO/IBO buffers and model, view, and projection transforms.</li>
-              <li>Added texture mapping, multi-light Phong shading, and skybox rendering in GLSL.</li>
+              <li>Rebuilt a C++/OpenGL renderer with an OBJ/MTL parser and vertex deduplication, reducing a test model's vertex count by 71% and parse time from 108 ms to 56 ms.</li>
+              <li>Added Cook-Torrance PBR with image based lighting, PCF shadows, and glTF 2.0 loading. Fuzz tested both loaders under ASan/UBSan, with no issues found across more than 710,000 OBJ inputs.</li>
             </ul>
             <div class="pills"><span class="pill">C++</span><span class="pill">OpenGL</span><span class="pill">GLSL</span><span class="pill">Blender</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/3D-Rendering-Engine" target="_blank" rel="noopener">Source code →</a></div>
@@ -341,8 +341,8 @@
             <span class="tag">AWS CSV import service</span>
             <div class="metric"><span class="v">37.2 → 181.5</span><span class="k">rows/s after moving SQS batch size from 1 to 10 (2,000-row runs, 3 each)</span></div>
             <ul>
-              <li>Built and deployed on AWS with CDK: 3 Lambda event source mappings, SQS, DynamoDB, and Cognito; all 16 live end-to-end checks passed.</li>
-              <li>Made row writes safe to repeat with DynamoDB transactions: 9 live crash and duplicate tests saved no row twice, and fixes cut job time after a crash from 364.7 s to 4.8 s.</li>
+              <li>Built and deployed a serverless CSV import service using AWS CDK, Lambda, SQS, DynamoDB, and Cognito. All 16 end to end tests passed against the live deployment.</li>
+              <li>Used DynamoDB transactions to prevent duplicate row writes, verified in nine live crash and duplicate tests. Reduced job completion time after a crash from 365 s to 5 s.</li>
             </ul>
             <div class="pills"><span class="pill">Python</span><span class="pill">AWS CDK</span><span class="pill">Lambda</span><span class="pill">SQS</span><span class="pill">DynamoDB</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/catalogbridge" target="_blank" rel="noopener">Source code →</a></div>
@@ -353,8 +353,8 @@
             <span class="tag">6 setups · 300 claims · frozen protocol</span>
             <div class="metric"><span class="v">0.645 → 0.695</span><span class="k">nDCG@10 with a reranker; faithful answers stayed at 79–84%</span></div>
             <ul>
-              <li>Built a FastAPI RAG service (FAISS, local LLM via Ollama) and tested 6 setups on 300 claims.</li>
-              <li>Dropped an LLM judge that matched 20 hand labels no better than chance (kappa −0.07); shipped with API keys, rate limits, Docker, and 112 tests in CI.</li>
+              <li>Built a FastAPI RAG service with FAISS and a local LLM through Ollama, and tested six setups on 300 claims. A reranker raised nDCG@10 from 0.645 to 0.695, but faithful answers stayed between 79% and 84% in all six.</li>
+              <li>Dropped an LLM judge after it matched 20 hand labels no better than chance (kappa −0.07). Shipped the service with API keys, rate limits, Docker, and 112 tests in CI.</li>
             </ul>
             <div class="pills"><span class="pill">FastAPI</span><span class="pill">FAISS</span><span class="pill">Ollama</span><span class="pill">Docker</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/scifact-rag" target="_blank" rel="noopener">Source code →</a></div>
@@ -365,8 +365,8 @@
             <span class="tag">Personal fork · 3 seeds</span>
             <div class="metric"><span class="v">+3.2%</span><span class="k">nDCG@10 over random negatives on 300 SciFact test claims</span></div>
             <ul>
-              <li>Fine-tuned MiniLM with PyTorch on mined hard negatives: +3.2% nDCG@10 and +2.1% Recall@10 over random negatives.</li>
-              <li>Added data leakage checks, a false-negative review, and 53 unit tests.</li>
+              <li>Fine tuned MiniLM with PyTorch on mined hard negatives, improving nDCG@10 by 3.2% and Recall@10 by 2.1% over random negatives on 300 SciFact test claims across three seeds.</li>
+              <li>Added data leakage checks, a false negative review, and 53 unit tests.</li>
             </ul>
             <div class="pills"><span class="pill">PyTorch</span><span class="pill">Sentence Transformers</span><span class="pill">MiniLM</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/sentence-transformers/pull/1" target="_blank" rel="noopener">Source code →</a></div>
@@ -375,9 +375,9 @@
           <article class="card reveal" data-cat="ai">
             <div class="top"><h3>Promptfoo Agent Retry Validation</h3><span class="date">Oct 2026</span></div>
             <span class="tag">Personal fork · TypeScript</span>
-            <div class="metric"><span class="v">81 tests</span><span class="k">60 config checks and 11 retry scenarios with fake model calls</span></div>
+            <div class="metric"><span class="v">81 tests</span><span class="k">60 config checks and 11 retry scenarios with mocked model calls</span></div>
             <ul>
-              <li>Added nested error paths to retry-policy checks in TypeScript; 6 regression cases fail before the change and pass after.</li>
+              <li>Added nested error paths to the retry policy checks in TypeScript. Six new tests fail before the change and pass after it.</li>
             </ul>
             <div class="pills"><span class="pill">TypeScript</span><span class="pill">Vitest</span><span class="pill">OpenAI Agents SDK</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/promptfoo/tree/fix/agents-retry-policy-validation" target="_blank" rel="noopener">Source code →</a></div>
