@@ -179,8 +179,8 @@
     .pills { display: flex; flex-wrap: wrap; gap: 6px; }
     .pill { font-family: var(--f-mono); font-size: 0.74rem; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; }
     .card .foot { margin-top: auto; }
-    .card .foot a { font-size: 0.9rem; color: var(--accent); text-decoration: none; }
-    .card .foot a:hover { text-decoration: underline; }
+    .card .foot a, .paper .foot a { font-size: 0.9rem; color: var(--accent); text-decoration: none; }
+    .card .foot a:hover, .paper .foot a:hover { text-decoration: underline; }
 
     /* research with live waveform */
     .research { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -390,9 +390,10 @@
         <div class="head reveal"><h2 id="res-h">Research</h2></div>
         <div class="research">
           <div class="paper reveal">
-            <span class="tag">IEEE Transactions on Human-Machine Systems · accepted Aug 2026</span>
+            <span class="tag">IEEE Transactions on Human-Machine Systems · 2026</span>
             <h3>"Noninvasive Portable System With Dual Near-Infrared Light Technology for Monitoring Uric Acid Concentration"</h3>
             <p>Coauthor (5th of 6). A finger-clip device reads PPG signals at 810 nm and 860 nm; 30 participants, leave-one-subject-out testing, team's best model 10.3% MAPE.</p>
+            <div class="foot"><a href="https://doi.org/10.1109/THMS.2026.3724413" target="_blank" rel="noopener">Read the paper →</a></div>
           </div>
           <div class="scope reveal">
             <div class="legend"><span><i style="background:var(--accent)"></i>810 nm</span><span><i style="background:var(--accent-2)"></i>860 nm</span><span>illustration only</span></div>
