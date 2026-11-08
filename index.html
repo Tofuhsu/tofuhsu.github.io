@@ -317,9 +317,9 @@
             <div class="top"><h3>Cortex-M4 Emulator and Bare-Metal Firmware</h3><span class="date">Nov 2026 – Present</span></div>
             <div class="metric"><span class="v">33 / 35</span><span class="k">test programs match Renode</span></div>
             <ul>
-              <li>A Cortex-M4 emulator in C that runs bare-metal STM32F446 firmware with no board and models six chip peripherals.</li>
+              <li>A Cortex-M4 emulator in C that decodes Thumb-2, handles exceptions through NVIC and SysTick, and runs bare-metal STM32F446 firmware with no board. A GDB stub supports breakpoints and single stepping.</li>
               <li>Compared it with Renode one instruction at a time. 33 of 35 test programs matched, and so did the first 16,439 firmware instructions.</li>
-              <li>The no-HAL firmware drives UART, a BME280, and an SSD1306 and passes seven Renode tests. It has not run on a board yet.</li>
+              <li>The no-HAL firmware uses interrupt driven UART with ring buffers and I2C drivers for a BME280 and an SSD1306. Unit, emulator, and Renode tests run in GitHub Actions CI, but not yet on a real board.</li>
             </ul>
             <div class="pills"><span class="pill">C</span><span class="pill">Arm Thumb-2</span><span class="pill">STM32F446</span><span class="pill">Renode</span><span class="pill">GDB</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/cortex-m-emu" target="_blank" rel="noopener">Source code →</a> · <a href="https://github.com/Tofuhsu/stm32-baremetal-sensor-node" target="_blank" rel="noopener">Firmware →</a></div>
@@ -342,7 +342,7 @@
             <div class="metric"><span class="v">−71%</span><span class="k">vertices after deduplication</span></div>
             <ul>
               <li>Rebuilt a C++/OpenGL renderer with an OBJ/MTL parser and vertex deduplication, reducing a test model's vertex count by 71% and parse time from 108 ms to 56 ms.</li>
-              <li>Added Cook-Torrance PBR with image based lighting, PCF shadows, and glTF 2.0 loading. Fuzz tested both loaders under ASan/UBSan, with no issues found across more than 710,000 OBJ inputs.</li>
+              <li>Fuzz tested the OBJ and glTF loaders under ASan/UBSan with no issues found, including more than 710,000 OBJ inputs. Also added Cook-Torrance PBR, PCF shadows, and glTF 2.0 loading.</li>
             </ul>
             <div class="pills"><span class="pill">C++</span><span class="pill">OpenGL</span><span class="pill">GLSL</span><span class="pill">Blender</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/3D-Rendering-Engine" target="_blank" rel="noopener">Source code →</a></div>
