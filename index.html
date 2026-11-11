@@ -245,7 +245,7 @@
           <img class="avatar" src="assets/profile.jpg" alt="Jeff Hsu" width="104" height="104">
           <span class="status"><span class="dot"></span>Open to 2027 new grad roles</span>
           <h1>Jeff (Hsuan-Fu) Hsu<br><span class="soft">Embedded systems &amp; AI engineer</span></h1>
-          <p class="lede">M.S. Computer Science at <b>USC</b> (May 2027).</p>
+          <p class="lede">M.S. Computer Science at <b>USC</b>, graduating May 2027. I like working close to the hardware.</p>
           <div class="cta">
             <a class="btn primary" href="assets/Hsuan_Fu_Hsu_Embedded_Systems_May2027.pdf" target="_blank" rel="noopener">Resume · Embedded</a>
             <a class="btn" href="assets/Hsuan_Fu_Hsu_AI_Engineering_May2027.pdf" target="_blank" rel="noopener">Resume · AI</a>
@@ -281,9 +281,9 @@
               <h3>Software Engineer Intern</h3>
               <div class="org">Tech-Management Workshop Co., Ltd.</div>
               <ul>
-                <li>Built a birth grant application system using ASP.NET Core MVC and SQL Server as the sole developer, and deployed it to 29 government offices.</li>
+                <li>As the sole developer, built a birth grant application system in ASP.NET Core MVC and SQL Server and rolled it out to 29 government offices.</li>
                 <li>Replaced manual uploads of entire datasets with a sync process that transfers only changed records across 29 offices.</li>
-                <li>Optimized SQL Server processing and storage, reducing database latency by at least 50% and resource usage by at least 30%.</li>
+                <li>Tuned SQL Server processing and storage, which cut database latency by at least 50% and resource usage by at least 30%.</li>
               </ul>
             </div>
           </article>
@@ -294,7 +294,7 @@
               <div class="org">National Taipei University · Advisor: Prof. Bor-Shing Lin</div>
               <ul>
                 <li>Co-developed a portable NIR sensing device with two teammates, using an Arduino Nano 33 BLE Sense and an AS7263 sensor connected over I2C. The device sampled 810/860 nm signals at 34 Hz and transmitted readings over BLE.</li>
-                <li>Built a Python pipeline to process NIR signals from 30 participants. The team's best model estimated uric acid levels with 10.3% MAPE in leave-one-subject-out testing.</li>
+                <li>Wrote the Python pipeline that processes NIR signals from 30 participants. Our best model estimated uric acid levels with 10.3% MAPE in leave-one-subject-out testing.</li>
                 <li>Received an individual NSTC research grant and placed fourth in NTPU's project competition as part of a three person team.</li>
               </ul>
             </div>
@@ -318,7 +318,7 @@
             <div class="metric"><span class="v">33 / 35</span><span class="k">test programs match Renode</span></div>
             <ul>
               <li>A Cortex-M4 emulator in C that decodes Thumb-2, handles exceptions through NVIC and SysTick, and runs bare-metal STM32F446 firmware with no board. A GDB stub supports breakpoints and single stepping.</li>
-              <li>Compared it with Renode one instruction at a time. 33 of 35 test programs matched, and so did the first 16,439 firmware instructions.</li>
+              <li>Checked it against Renode one instruction at a time: 33 of 35 test programs matched, as did the first 16,439 instructions of the firmware.</li>
               <li>The no-HAL firmware uses interrupt driven UART with ring buffers and I2C drivers for a BME280 and an SSD1306. Unit, emulator, and Renode tests run in GitHub Actions CI, but not yet on a real board.</li>
             </ul>
             <div class="pills"><span class="pill">C</span><span class="pill">Arm Thumb-2</span><span class="pill">STM32F446</span><span class="pill">Renode</span><span class="pill">GDB</span></div>
@@ -342,7 +342,7 @@
             <div class="metric"><span class="v">−71%</span><span class="k">vertices after deduplication</span></div>
             <ul>
               <li>Rebuilt a C++/OpenGL renderer with an OBJ/MTL parser and vertex deduplication, reducing a test model's vertex count by 71% and parse time from 108 ms to 56 ms.</li>
-              <li>Fuzz tested the OBJ and glTF loaders under ASan/UBSan with no issues found, including more than 710,000 OBJ inputs. Also added Cook-Torrance PBR, PCF shadows, and glTF 2.0 loading.</li>
+              <li>Fuzz tested the OBJ and glTF loaders under ASan/UBSan, including more than 710,000 OBJ inputs, and found no issues. Also added Cook-Torrance PBR, PCF shadows, and glTF 2.0 loading.</li>
             </ul>
             <div class="pills"><span class="pill">C++</span><span class="pill">OpenGL</span><span class="pill">GLSL</span><span class="pill">Blender</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/3D-Rendering-Engine" target="_blank" rel="noopener">Source code →</a></div>
@@ -353,7 +353,7 @@
             <span class="tag">AWS CSV import service</span>
             <div class="metric"><span class="v">37.2 → 181.5</span><span class="k">rows/s</span></div>
             <ul>
-              <li>Built and deployed a serverless CSV import service using AWS CDK, Lambda, SQS, DynamoDB, and Cognito. All 16 end to end tests passed against the live deployment.</li>
+              <li>Designed and deployed a serverless CSV import service on AWS with CDK, Lambda, SQS, DynamoDB, and Cognito. All 16 end to end tests passed against the live deployment.</li>
               <li>Used DynamoDB transactions to prevent duplicate row writes, verified in nine live crash and duplicate tests. Reduced job completion time after a crash from 365 s to 5 s.</li>
             </ul>
             <div class="pills"><span class="pill">Python</span><span class="pill">AWS CDK</span><span class="pill">Lambda</span><span class="pill">SQS</span><span class="pill">DynamoDB</span></div>
@@ -364,7 +364,7 @@
             <div class="top"><h3>Scientific Claim QA: RAG Evaluation</h3><span class="date">Oct 2026</span></div>
             <div class="metric"><span class="v">0.645 → 0.695</span><span class="k">nDCG@10 with a reranker</span></div>
             <ul>
-              <li>Built a FastAPI RAG service with FAISS and a local LLM through Ollama, and tested six setups on 300 claims. A reranker raised nDCG@10 from 0.645 to 0.695, but faithful answers stayed between 79% and 84% in all six.</li>
+              <li>Put together a FastAPI RAG service with FAISS and a local LLM through Ollama, then tested six setups on 300 claims. A reranker lifted nDCG@10 from 0.645 to 0.695, yet faithful answers stayed between 79% and 84% in all six.</li>
               <li>Dropped an LLM judge after it matched 20 hand labels no better than chance (kappa −0.07). Shipped the service with API keys, rate limits, Docker, and 112 tests in CI.</li>
             </ul>
             <div class="pills"><span class="pill">FastAPI</span><span class="pill">FAISS</span><span class="pill">Ollama</span><span class="pill">Docker</span></div>
