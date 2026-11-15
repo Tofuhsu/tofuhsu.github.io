@@ -1,4 +1,4 @@
-# Jeff Hsu — Software Engineering Portfolio
+# Jeff Hsu: Portfolio
 
 Minimal personal portfolio website for Jeff (Hsuan-Fu) Hsu, built with semantic HTML and responsive CSS.
 
