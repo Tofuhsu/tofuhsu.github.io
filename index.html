@@ -181,6 +181,7 @@
     .card .foot { margin-top: auto; }
     .card .foot a, .paper .foot a { font-size: 0.9rem; color: var(--accent); text-decoration: none; }
     .card .foot a:hover, .paper .foot a:hover { text-decoration: underline; }
+    .card .foot span { font-size: 0.9rem; color: var(--muted); }
 
     /* research with live waveform */
     .research { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -369,6 +370,18 @@
             </ul>
             <div class="pills"><span class="pill">FastAPI</span><span class="pill">FAISS</span><span class="pill">Ollama</span><span class="pill">Docker</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/scifact-rag" target="_blank" rel="noopener">Source code →</a></div>
+          </article>
+
+          <article class="card reveal" data-cat="ai">
+            <div class="top"><h3>Wren: Hybrid LLM Personal Assistant</h3><span class="date">Oct 2026 – Nov 2026</span></div>
+            <span class="tag">USC CSCI 599 · course project</span>
+            <div class="metric"><span class="v">289 / 289</span><span class="k">heartbeats in a 48 h run</span></div>
+            <ul>
+              <li>A Telegram assistant on Google Cloud Run that sends each turn to GPT-5.6 Sol or to Gemma 4 26B running on a laptop through Ollama and Tailscale. It ran for 48 hours with 289 of 289 heartbeats and no model call errors.</li>
+              <li>Email goes out only to allowlisted recipients after a human approves, and never from a scheduled job. All 6 prompt injection and permission attacks were blocked, and 42 tests cover routing, the email gate, and memory.</li>
+            </ul>
+            <div class="pills"><span class="pill">Node.js</span><span class="pill">OpenClaw</span><span class="pill">Ollama</span><span class="pill">Google Cloud Run</span><span class="pill">Tailscale</span></div>
+            <div class="foot"><span>Test accounts and synthetic data. Code is private under course policy and available to employers on request.</span></div>
           </article>
 
           <article class="card reveal" data-cat="ai">
