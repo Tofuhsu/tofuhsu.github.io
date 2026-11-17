@@ -342,8 +342,8 @@
             <div class="top"><h3>3D Rendering Engine</h3><span class="date">Oct 2022 – Jan 2023 · rebuilt Nov 2026</span></div>
             <div class="metric"><span class="v">−71%</span><span class="k">vertices after deduplication</span></div>
             <ul>
-              <li>Rebuilt a C++/OpenGL renderer with an OBJ/MTL parser and vertex deduplication, reducing a test model's vertex count by 71% and parse time from 108 ms to 56 ms.</li>
-              <li>Fuzz tested the OBJ and glTF loaders under ASan/UBSan, including more than 710,000 OBJ inputs, and found no issues. Also added Cook-Torrance PBR, PCF shadows, and glTF 2.0 loading.</li>
+              <li>Rebuilt a C++/OpenGL renderer with an OBJ/MTL parser and vertex deduplication. On a test model, vertex count fell by 71% and parse time dropped from 108 ms to 56 ms.</li>
+              <li>Fuzz tested the OBJ and glTF loaders under ASan/UBSan with more than 710,000 OBJ inputs, and no issues turned up. The renderer also has Cook-Torrance PBR, PCF shadows, and glTF 2.0 loading.</li>
             </ul>
             <div class="pills"><span class="pill">C++</span><span class="pill">OpenGL</span><span class="pill">GLSL</span><span class="pill">Blender</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/3D-Rendering-Engine" target="_blank" rel="noopener">Source code →</a></div>
