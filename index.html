@@ -319,7 +319,7 @@
             <div class="metric"><span class="v">33 / 35</span><span class="k">test programs match Renode</span></div>
             <ul>
               <li>A Cortex-M4 emulator in C that decodes Thumb-2, handles exceptions through NVIC and SysTick, and runs bare-metal STM32F446 firmware with no board. A GDB stub supports breakpoints and single stepping.</li>
-              <li>Checked it against Renode one instruction at a time: 33 of 35 test programs matched, as did the first 16,439 instructions of the firmware. On the board, all 17 core registers matched the emulator at the same breakpoint, and a board reading of an I2C status register exposed an emulator bug, now fixed.</li>
+              <li>Checked it against Renode one instruction at a time: 33 of 35 test programs matched, as did the first 16,439 instructions of the blink firmware. On the board, all 17 core registers matched the emulator at the same breakpoint. An I2C status register reading exposed an emulator bug, now fixed.</li>
               <li>The no-HAL firmware uses interrupt driven UART with ring buffers and I2C drivers for a BME280 and an SSD1306. It runs on a NUCLEO-F446RE board and reads the BME280 over 100 kHz I2C, checked with a logic analyzer. The SSD1306 is tested only in the emulator so far.</li>
             </ul>
             <div class="pills"><span class="pill">C</span><span class="pill">Arm Thumb-2</span><span class="pill">STM32F446</span><span class="pill">Renode</span><span class="pill">GDB</span></div>
@@ -343,7 +343,7 @@
             <div class="metric"><span class="v">−71%</span><span class="k">vertices after deduplication</span></div>
             <ul>
               <li>Rebuilt a C++/OpenGL renderer with an OBJ/MTL parser and vertex deduplication. On a test model, vertex count fell by 71% and parse time dropped from 108 ms to 56 ms.</li>
-              <li>Fuzz tested the OBJ and glTF loaders under ASan/UBSan with more than 710,000 OBJ inputs, and no issues turned up. The renderer also has Cook-Torrance PBR, PCF shadows, and glTF 2.0 loading.</li>
+              <li>Fuzz tested OBJ and glTF loaders under ASan/UBSan with no findings (more than 710,000 OBJ inputs). The renderer also has Cook-Torrance PBR, PCF shadows, and glTF 2.0 loading.</li>
             </ul>
             <div class="pills"><span class="pill">C++</span><span class="pill">OpenGL</span><span class="pill">GLSL</span><span class="pill">Blender</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/3D-Rendering-Engine" target="_blank" rel="noopener">Source code →</a></div>
@@ -365,7 +365,7 @@
             <div class="top"><h3>Scientific Claim QA: RAG Evaluation</h3><span class="date">Oct 2026</span></div>
             <div class="metric"><span class="v">0.645 → 0.695</span><span class="k">nDCG@10 with a reranker</span></div>
             <ul>
-              <li>Put together a FastAPI RAG service with FAISS and a local LLM through Ollama, then tested six setups on 300 claims. A reranker lifted nDCG@10 from 0.645 to 0.695, yet faithful answers stayed between 79% and 84% in all six.</li>
+              <li>Built a FastAPI RAG service with FAISS and a local LLM through Ollama, then tested six setups on 300 claims. A reranker lifted nDCG@10 from 0.645 to 0.695; sampled human checks found between 79% and 84% faithful answers.</li>
               <li>Dropped an LLM judge after it matched 20 hand labels no better than chance (kappa −0.07). Shipped the service with API keys, rate limits, Docker, and 112 tests in CI.</li>
             </ul>
             <div class="pills"><span class="pill">FastAPI</span><span class="pill">FAISS</span><span class="pill">Ollama</span><span class="pill">Docker</span></div>
