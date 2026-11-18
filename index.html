@@ -320,7 +320,7 @@
             <ul>
               <li>A Cortex-M4 emulator in C that decodes Thumb-2, handles exceptions through NVIC and SysTick, and runs bare-metal STM32F446 firmware with no board. A GDB stub supports breakpoints and single stepping.</li>
               <li>Checked it against Renode one instruction at a time: 33 of 35 test programs matched, as did the first 16,439 instructions of the blink firmware. On the board, all 17 core registers matched the emulator at the same breakpoint. An I2C status register reading exposed an emulator bug, now fixed.</li>
-              <li>The no-HAL firmware uses interrupt driven UART with ring buffers and I2C drivers for a BME280 and an SSD1306. It runs on a NUCLEO-F446RE board and reads the BME280 over 100 kHz I2C, checked with a logic analyzer. The SSD1306 is tested only in the emulator so far.</li>
+              <li>The no-HAL firmware uses interrupt driven UART with ring buffers and I2C drivers for a BME280 and an SSD1306. On a NUCLEO-F446RE board it reads the BME280 over 100 kHz I2C, checked with a logic analyzer, and shows the reading on a real SSD1306 OLED.</li>
             </ul>
             <div class="pills"><span class="pill">C</span><span class="pill">Arm Thumb-2</span><span class="pill">STM32F446</span><span class="pill">Renode</span><span class="pill">GDB</span></div>
             <div class="foot"><a href="https://github.com/Tofuhsu/cortex-m-emu" target="_blank" rel="noopener">Source code →</a> · <a href="https://github.com/Tofuhsu/stm32-baremetal-sensor-node" target="_blank" rel="noopener">Firmware →</a></div>
